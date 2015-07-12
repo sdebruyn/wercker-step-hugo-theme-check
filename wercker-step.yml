@@ -1,0 +1,17 @@
+name: hugo-theme-check
+version: 0.1
+description: |
+    This step downloads Hugo (http://gohugo.io) and creates a new site with 1 post and the included theme. It then runs hugo check to verify if the syntax of your theme.
+keywords:
+  - hugo
+  - theme
+  - verify
+type: build
+properties:
+    version:
+        type: string
+        default: "0.14"
+    name:
+        type: string
+        default: ""
+        required: false
