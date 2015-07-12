@@ -39,4 +39,5 @@ mv * $WERCKER_STEP_ROOT/test/themes/${WERCKER_HUGO_THEME_CHECK_NAME}/
 cd $WERCKER_STEP_ROOT/test
 hugo new post/test.markdown
 
-hugo check
+hugo check -t ${WERCKER_HUGO_THEME_CHECK_NAME}
+hugo build -D -F -t ${WERCKER_HUGO_THEME_CHECK_NAME}

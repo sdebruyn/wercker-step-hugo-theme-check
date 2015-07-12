@@ -12,6 +12,7 @@ The script is based on the [hugo build](https://github.com/ArjenSchwarz/wercker-
 1. Creates a new site with a single post
 1. The theme is put in the themes folder
 1. The `hugo check` command is used to validate the syntax
+1. The `hugo build` command is used to make sure the site build with your theme
 
 ## Configuration
 
