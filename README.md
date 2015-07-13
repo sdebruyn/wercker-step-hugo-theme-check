@@ -9,17 +9,17 @@ The script is based on the [hugo build](https://github.com/ArjenSchwarz/wercker-
 ## How it works
 
 1. Downloads and installs hugo
-1. Creates a new site with a single post
+1. Clones https://github.com/spf13/HugoBasicExample as an example website to test the theme
 1. The theme is put in the themes folder
 1. The `hugo check` command is used to validate the syntax
-1. The `hugo build` command is used to make sure the site build with your theme
+1. The `hugo build` command is used to make sure the site builds with your theme
 
 ## Configuration
 
 Every parameter is optional. If you don't provide it, a default value will be used.
 
 * `version` (between quotes): the version of hugo you want to use (default: *the latest version*)
-* `name`: the name of your theme (default: *mytheme*)
+* `theme`: the name of your theme (default: *mytheme*)
 
 ### Docker stack example
 
