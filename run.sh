@@ -2,14 +2,26 @@
 
 LATEST_HUGO_VERSION=0.14
 
+# update sources if needed
+if [ "$(which apt-get)" != "" ]; then
+    apt-get update
+fi
+
 # check if curl is installed
-# install otherwise
 if [ "$(which curl)" == "" ]; then
     if [ "$(which apt-get)" != "" ]; then
-        apt-get update
         apt-get install -y curl
     else
         yum install -y curl
+    fi
+fi
+
+# check if git is installed
+if [ "$(which git)" == "" ]; then
+    if [ "$(which apt-get)" != "" ]; then
+        apt-get install -y git
+    else
+        yum install -y git
     fi
 fi
 
