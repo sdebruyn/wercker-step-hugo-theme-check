@@ -27,7 +27,7 @@ Every parameter is optional. If you don't provide it, a default value will be us
 	box: debian
 	build:
 	  steps:
-	    - SamuelDebruyn/hugo-theme-check:
+	    - samueldebruyn/hugo-theme-check:
 	        version: "0.14"
 	        theme: material-lite
 
@@ -36,6 +36,6 @@ Every parameter is optional. If you don't provide it, a default value will be us
 	box: wercker/default
 	build:
 	  steps:
-	    - SamuelDebruyn/hugo-theme-check:
+	    - samueldebruyn/hugo-theme-check:
 	        version: "0.14"
 	        theme: material-lite
