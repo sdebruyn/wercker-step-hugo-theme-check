@@ -1,4 +1,5 @@
 #/bin/bash
+set -e
 
 LATEST_HUGO_VERSION=0.14
 
@@ -57,3 +58,7 @@ mv * $WERCKER_STEP_ROOT/HugoBasicExample/themes/${WERCKER_HUGO_THEME_CHECK_THEME
 cd $WERCKER_STEP_ROOT/HugoBasicExample
 ${WERCKER_STEP_ROOT}/hugo_${WERCKER_HUGO_THEME_CHECK_VERSION}_linux_amd64/hugo_${WERCKER_HUGO_THEME_CHECK_VERSION}_linux_amd64 check -t ${WERCKER_HUGO_THEME_CHECK_THEME}
 ${WERCKER_STEP_ROOT}/hugo_${WERCKER_HUGO_THEME_CHECK_VERSION}_linux_amd64/hugo_${WERCKER_HUGO_THEME_CHECK_VERSION}_linux_amd64 -t ${WERCKER_HUGO_THEME_CHECK_THEME}
+
+# check if screenshots and readme exist
+cd $WERCKER_STEP_ROOT/HugoBasicExample/themes/${WERCKER_HUGO_THEME_CHECK_THEME}/
+[[ -f README.md && -f images/screenshot.png && -f images/tn.png ]] && echo the required files exist || exit 1

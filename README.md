@@ -13,6 +13,7 @@ The script is based on the [hugo build](https://github.com/ArjenSchwarz/wercker-
 1. The theme is put in the themes folder
 1. The `hugo check` command is used to validate the syntax
 1. The `hugo build` command is used to make sure the site builds with your theme
+1. The script checks if you have the required files to publish your theme (*README.md*, *images/tn.png*, *images/screenshot.png*)
 
 ## Configuration
 
