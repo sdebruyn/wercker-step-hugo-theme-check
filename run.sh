@@ -30,14 +30,14 @@ cd $WERCKER_STEP_ROOT
 curl -L https://github.com/spf13/hugo/releases/download/v${WERCKER_HUGO_THEME_CHECK_VERSION}/hugo_${WERCKER_HUGO_THEME_CHECK_VERSION}_linux_amd64.tar.gz -o ${WERCKER_STEP_ROOT}/hugo_${WERCKER_HUGO_THEME_CHECK_VERSION}_linux_amd64.tar.gz
 tar xzf hugo_${WERCKER_HUGO_THEME_CHECK_VERSION}_linux_amd64.tar.gz
 
-hugo new site $WERCKER_STEP_ROOT/test		
+${WERCKER_STEP_ROOT}/hugo_${WERCKER_HUGO_BUILD_VERSION}_linux_amd64/hugo_${WERCKER_HUGO_BUILD_VERSION}_linux_amd64 new site $WERCKER_STEP_ROOT/test		
 mkdir -p $WERCKER_STEP_ROOT/test/themes/${WERCKER_HUGO_THEME_CHECK_NAME}
 
 cd $WERCKER_SOURCE_DIR
 mv * $WERCKER_STEP_ROOT/test/themes/${WERCKER_HUGO_THEME_CHECK_NAME}/
 
 cd $WERCKER_STEP_ROOT/test
-hugo new post/test.markdown
+${WERCKER_STEP_ROOT}/hugo_${WERCKER_HUGO_BUILD_VERSION}_linux_amd64/hugo_${WERCKER_HUGO_BUILD_VERSION}_linux_amd64 new post/test.markdown
 
-hugo check -t ${WERCKER_HUGO_THEME_CHECK_NAME}
-hugo build -D -F -t ${WERCKER_HUGO_THEME_CHECK_NAME}
+${WERCKER_STEP_ROOT}/hugo_${WERCKER_HUGO_BUILD_VERSION}_linux_amd64/hugo_${WERCKER_HUGO_BUILD_VERSION}_linux_amd64 check -t ${WERCKER_HUGO_THEME_CHECK_NAME}
+${WERCKER_STEP_ROOT}/hugo_${WERCKER_HUGO_BUILD_VERSION}_linux_amd64/hugo_${WERCKER_HUGO_BUILD_VERSION}_linux_amd64 build -D -F -t ${WERCKER_HUGO_THEME_CHECK_NAME}

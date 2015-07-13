@@ -1,5 +1,5 @@
 name: hugo-theme-check
-version: 0.3.0
+version: 0.3.1
 description: |
     This step downloads Hugo (http://gohugo.io) and creates a new site with 1 post and the included theme. It then runs hugo check to verify if the syntax of your theme.
 keywords:
