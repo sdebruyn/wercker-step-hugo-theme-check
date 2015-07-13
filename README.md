@@ -28,7 +28,7 @@ Every parameter is optional. If you don't provide it, a default value will be us
 	  steps:
 	    - SamuelDebruyn/hugo-theme-check:
 	        version: "0.14"
-	        name: redlounge
+	        theme: material-lite
 
 ### Old Wercker stack example
 
@@ -37,4 +37,4 @@ Every parameter is optional. If you don't provide it, a default value will be us
 	  steps:
 	    - SamuelDebruyn/hugo-theme-check:
 	        version: "0.14"
-	        name: redlounge
+	        theme: material-lite
