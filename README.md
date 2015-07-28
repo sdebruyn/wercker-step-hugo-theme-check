@@ -8,7 +8,7 @@ The script is based on the [hugo build](https://github.com/ArjenSchwarz/wercker-
 
 ## How it works
 
-1. Downloads and installs hugo
+1. Downloads and installs hugo if it is not already installed
 1. Clones https://github.com/spf13/HugoBasicExample as an example website to test the theme
 1. The theme is put in the themes folder
 1. The `hugo check` command is used to validate the syntax
@@ -17,18 +17,14 @@ The script is based on the [hugo build](https://github.com/ArjenSchwarz/wercker-
 
 ## Configuration
 
-Every parameter is optional. If you don't provide it, a default value will be used.
-
-* `version` (between quotes): the version of hugo you want to use (default: *the latest version*)
 * `theme`: the name of your theme (default: *mytheme*)
 
 ### Docker stack example
 
-	box: debian
+	box: samueldebruyn/hugo-build
 	build:
 	  steps:
 	    - samueldebruyn/hugo-theme-check:
-	        version: "0.14"
 	        theme: material-lite
 
 ### Old Wercker stack example
@@ -37,5 +33,4 @@ Every parameter is optional. If you don't provide it, a default value will be us
 	build:
 	  steps:
 	    - samueldebruyn/hugo-theme-check:
-	        version: "0.14"
 	        theme: material-lite
