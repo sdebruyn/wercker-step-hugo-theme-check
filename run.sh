@@ -24,7 +24,7 @@ install_hugo()
         fi
     fi
     
-    cd $WERCKER_STEP_ROOT
+    cd ${WERCKER_STEP_ROOT}
     echo "downloading hugo with curl..."
     curl -sL https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux_amd64.tar.gz -o ${WERCKER_STEP_ROOT}/hugo_${HUGO_VERSION}_linux_amd64.tar.gz
     echo "unpacking hugo..."
@@ -60,6 +60,7 @@ else
 fi
 
 # clone the example site
+cd ${WERCKER_STEP_ROOT}
 echo "cloning the example site from ${EXAMPLE_SITE} to a new directory called example..."
 git clone --recursive ${EXAMPLE_SITE} example
 echo "creating the directory example/themes/${WERCKER_HUGO_THEME_CHECK_THEME}"
