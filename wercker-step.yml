@@ -1,5 +1,5 @@
 name: hugo-theme-check
-version: 1.2.0
+version: 1.2.1
 description: |
     This step downloads Hugo (http://gohugo.io) and a basic example site. It then runs hugo check and builds the website to verify the syntax of your theme.
 keywords:
