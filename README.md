@@ -15,6 +15,10 @@ The script is based on the [hugo build](https://github.com/ArjenSchwarz/wercker-
 1. The `hugo` command is used to make sure the site builds with your theme
 1. The script checks if you have the required files to publish your theme (*README.md*, *images/tn.png*, *images/screenshot.png*)
 
+## Versioning
+
+The version number consists of three numbers. A bump in the in the major version (first number) indicates breaking changes. A bump in the second number indicates new features. The third number is increased for bugfixes.
+
 ## Configuration
 
 * `theme`: the name of your theme (default: *mytheme*)
